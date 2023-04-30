@@ -1,0 +1,10 @@
+# terraform
+.terraform/
+*.tfstate
+
+# helm charts
+**/charts/
+
+
+# secrets
+secrets.tfvars

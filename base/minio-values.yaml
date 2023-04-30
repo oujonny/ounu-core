@@ -1,0 +1,16 @@
+persistence:
+  size: 50Gi
+
+ingress:
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+    cert-manager.io/issuer: "letsencrypt-prd"
+  ingressClassName: "nginx"
+  hosts:
+    - host: vault.ounu.ch
+  tls:
+    - secretName: vault.ounu.ch-tls
+      hosts:
+        - vault.ounu.ch
