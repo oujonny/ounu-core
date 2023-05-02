@@ -6,7 +6,7 @@ ingress:
     cert-manager.io/issuer: "letsencrypt-prd"
   ingressClassName: "nginx"
   hosts:
-    - host: vault.ounu.ch
+    - vault.ounu.ch
   tls:
     - secretName: vault.ounu.ch-tls
       hosts:
